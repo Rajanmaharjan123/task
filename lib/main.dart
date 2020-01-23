@@ -63,7 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       labelText: 'Email Address ',
                     ),
                     controller: _courseController,
-                    validator: (val) => val.isNotEmpty ? null : 'invalid email',
+                    validator: (val) =>
+                        val.contains('@') ? null : 'please enter valid email',
                   ),
                   RaisedButton(
                     textColor: Colors.white,
